@@ -6,7 +6,7 @@ Unable to find any suitable data sets showing a single apple species at differen
 In the Fruits 360 data set, we used crimson snow apples to represent ripe apples, and the data set's "red 2" apples to represent unripe apples. We  chose to use these since the two types had a very similar shape in their images, making the biggest variation between them the color which is what our model focuses on.
 
 \subsubsection{Model}
-The ripeness of an apple is determined by an SVM classifier model based on the HSV values of the apple image because it has been shown to be capable of having a high accuracy at fruit ripeness detection. %TODO cite https://www.researchgate.net/publication/342058112_Fruit_Ripeness_Based_on_RGB_HSV_HSL_Lab_Color_Feature_Using_SVM
+The ripeness of an apple is determined by an SVM classifier model based on the HSV values of the apple image because it has been shown to be capable of having a high accuracy at fruit ripeness detection\cite{HSVRipeness}.
 The model takes an input feature vector based on the histogram calculation of an HSV image, Using OpenCV within python.
 Within OpenCV, hue is a number from 0 to 179, inclusive, and saturation and value are both numbers from 0 to 255, inclusive.
 The histogram calculation from these results in a 1-dimensional feature vector storing 689 numbers. 
