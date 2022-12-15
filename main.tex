@@ -3,6 +3,7 @@
 \usepackage{algorithmic}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{cite}
+\usepackage{epstopdf}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{svg}
@@ -10,8 +11,10 @@
 \usepackage{xcolor}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-\begin{document}
 
+\pdfminorversion=7 % Because epstopdf outputs as version 1.7
+    
+\begin{document}
 \title{
     Fruit Flies:\\
     Developing Flying Orchard Robots
