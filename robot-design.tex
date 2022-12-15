@@ -12,8 +12,6 @@ The intelligence hierarchy is outlined in \autoref{fig:intelligence-hierarchy}.
 The controller starts by detecting if an apple if is in view, then proceeds to calculate its position relative to the apple and approach it.
 Finally, models are used to detect the ripeness of the apple, as well as if it is rotten.
 
-
-
 \begin{figure}[!htb]
     \fontsize{7}{5}\selectfont
     \centering
@@ -25,6 +23,7 @@ Finally, models are used to detect the ripeness of the apple, as well as if it i
     }
     \label{fig:intelligence-hierarchy}
 \end{figure}
+
 The data flow for the hierarchy can be seen in \autoref{fig:fruit-fly-model-diagram}.
 Each step occurs sequentially, and the next one only occurs when the previous one completes successfully.
 For example, the drone will not calculate its position relative to an apple if it does not detect an apple, nor will it detect its ripeness.
