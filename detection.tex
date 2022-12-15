@@ -1,7 +1,8 @@
 \subsection{Initial Object Detection}
 As the intelligence hierarchy demonstrates, the first component of our model needed to be able to detect when an apple appeared in the drone's field of view. 
 We trained a lightweight convolutional neural network (CNN), that was based off of MobileNet~\cite{Sandler2018,PyTorchMobileNet} in order to accomplish this. 
-In order to do this, we selected a Haar-Cascade model because of its lightweight nature, simplicity, and its real-time object detection capabilities.\footnote{The Haar-Cascade model was trained using a graphical user interface created by Amin Ahmadi\url{https://amin-ahmadi.com/cascade-trainer-gui/}.} 
+In order to do this, we selected a Haar-Cascade model because of its lightweight nature, simplicity, and its real-time object detection capabilities.\footnote{The Haar-Cascade model was trained using a graphical user interface created by Amin Ahmadi (\url{https://amin-ahmadi.com/cascade-trainer-gui/}).} 
 The data we used to train the model was a compilation of data sets such as the Fruit360 data set \cite{Fruit360}.
 In addition to the positive images (images containing apples), a myriad of negative images (images without apples) were used to train the model.
-The negative images were were selected based on specific charact
+The negative images were were selected based on specific characteristics we knew the model would eventually encounter. 
+For example, we have a set of images that contain peoples hands and hands holding objects that aren't apples, so that the model can differentiate between when someone is holding
