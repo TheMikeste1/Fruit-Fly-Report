@@ -4,7 +4,6 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{cite}
 \usepackage{graphicx}
-\usepackage{epstopdf}
 \usepackage{hyperref}
 \usepackage{svg}
 \usepackage{textcomp}
@@ -12,6 +11,7 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
+\usepackage{epstopdf}
 \pdfminorversion=7 % Because epstopdf outputs as version 1.7
     
 \begin{document}
@@ -32,6 +32,8 @@
 }
 
 \maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
 
 \input{abstract}
 
