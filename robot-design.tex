@@ -13,9 +13,9 @@ The controller starts by detecting if an apple if is in view, then proceeds to c
 Finally, models are used to detect the ripeness of the apple, as well as if it is rotten.
 
 The data flow for the hierarchy can be seen in \autoref{fig:fruit-fly-model-diagram}.
-Each step occurs sequentially, and the next one only occu
+Each step occurs sequentially, and the next one only occurs when the previous one completes successfully.
+For example, the drone will not calculate its position relative to an apple if it does not detect an apple, nor will it detect its ripeness.
 This setup removes the burden from the drone, while also minimizing the calculations done by the controller.
-
 
 \begin{figure}[!htb]
     \fontsize{7}{5}\selectfont
