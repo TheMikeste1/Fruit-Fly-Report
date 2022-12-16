@@ -1,8 +1,8 @@
 \subsection{Ripeness Detection}
 \subsubsection{Data}
 The data for this model was a subset of the Fruits360 dataset~\cite{Fruit360}.
-Unable to find any suitable datasets showing a single apple species at different stages of ripeness, we settled for using two ripe, similar looking apple species.
-In the Fruits360 dataset~\cite{Fruit360}, we used crimson snow apples to represent ripe apples, and the dataset's ``red 2'' apples to represent unripe apples. We  chose to use these since the two types had a very similar shape in their images, making the biggest variation between them the color which is what our model focuses on.
+Since we were unable to find any suitable datasets showing a single apple species at different stages of ripeness, we settled for using two ripe, similar looking apple species.
+In the Fruits360 dataset~\cite{Fruit360}, we used crimson snow apples to represent ripe apples, and the dataset's ``red 2'' apples to represent unripe apples. We  chose to use these since the two types had a very similar shape in their images, making the largest variation between them the color which is what our model focuses on.
 
 \subsubsection{Model}
 The ripeness of an apple is predicted by an SVM classifier model using the HSV values of the apple image . This has been shown to be capable of having a high accuracy at fruit ripeness detection, and HSV specifically was able to outperform other methods of color extraction~\cite{HSVRipeness}.
