@@ -9,34 +9,34 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \usepackage{epstopdf}
 \pdfminorversion=7 % Because epstopdf outputs as version 1.7
-    
+
 \begin{document}
-\title{
-    Fruit Flies:\\
-    Developing Flying Orchard Robots
-}
+    \title{
+        Fruit Flies:\\
+        Developing Flying Orchard Robots
+    }
 
-\author{
-    \IEEEauthorblockN{Michael Hegerhorst}
-    \IEEEauthorblockA{michael.hegerhorst@gmail.com}
-    \and
-    \IEEEauthorblockN{Keaton Anderson}
-    \IEEEauthorblockA{keatona379@gmail.com}
-    \and
-    \IEEEauthorblockN{Caleb Syndergaard}
-    \IEEEauthorblockA{caleb.syndergaard@gmail.com}
-}
+    \author{
+        \IEEEauthorblockN{Michael Hegerhorst}
+        \IEEEauthorblockA{michael.hegerhorst@gmail.com}
+        \and
+        \IEEEauthorblockN{Keaton Anderson}
+        \IEEEauthorblockA{keatona379@gmail.com}
+        \and
+        \IEEEauthorblockN{Caleb Syndergaard}
+        \IEEEauthorblockA{caleb.syndergaard@gmail.com}
+    }
 
-\maketitle
+    \maketitle
 % \thispagestyle{plain} and \pagestyle{plain} allow page numbers
-\thispagestyle{plain}
-\pagestyle{plain}
+    \thispagestyle{plain}
+    \pagestyle{plain}
 
-\input{content/abstract}
+    \input{content/abstract}
 
 % TODO: Split up by section
 % Intro
@@ -44,21 +44,22 @@
 % Results
 % Conclusions
 % Etc.
-\input{content/intro}
+    \input{content/intro}
 %  Existing research
-% FIXME: MDH: We don't necessarily need all these sections. Feel free to add or remove as desired.
-\input{content/background}
+% FIXME: MDH: We don't necessarily need all these sections. Feel free to add or
+%     remove as desired.
+    \input{content/background}
 
-\input{content/methodology}
+    \input{content/methodology}
 
-\input{content/results}
+    \input{content/results}
 
-\input{content/conclusions}
+    \input{content/conclusions}
 
 
-\bibliographystyle{IEEEtran}
-\begin{small}
-    \bibliography{references}
-\end{small}
+    \bibliographystyle{IEEEtran}
+    \begin{small}
+        \bibliography{references}
+    \end{small}
 
 \end{document}

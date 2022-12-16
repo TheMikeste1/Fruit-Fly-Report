@@ -1,34 +1,53 @@
-\subsection{Ripeness Detection}
+\subsection{Ripeness Detection}\label{subsec:ripeness-detection}
+
 \subsubsection{Data}
 The data for this model was a subset of the Fruits360 dataset~\cite{Fruit360}.
-Since we were unable to find any suitable datasets showing a single apple species at different stages of ripeness, we settled for using two ripe, similar looking apple species.
-In the Fruits360 dataset~\cite{Fruit360}, we used crimson snow apples to represent ripe apples, and the dataset's ``red 2'' apples to represent unripe apples. We  chose to use these since the two types had a very similar shape in their images, making the largest variation between them the color, which is what our model focuses on.
+Since we were unable to find any suitable datasets showing a single apple species at
+different stages of ripeness, we settled for using two ripe, similar looking apple
+species.
+In the Fruits360 dataset~\cite{Fruit360}, we used crimson snow apples to represent
+ripe apples, and the dataset's ``red 2'' apples to represent unripe apples.
+We chose to use these since the two types had a very similar shape in their images,
+making the largest variation between them the color, which is what our model focuses on.
 
 \subsubsection{Model}
-The ripeness of an apple is predicted by an SVM classifier model using the HSV values of the apple image . This has been shown to be capable of having a high accuracy at fruit ripeness detection, and HSV specifically was able to outperform other methods of color extraction~\cite{HSVRipeness}.
+The ripeness of an apple is predicted by an SVM classifier model using the HSV values
+of the apple image.
+This has been shown to be capable of having a high accuracy at fruit ripeness
+detection, and HSV specifically was able to outperform other methods of color
+extraction~\cite{HSVRipeness}.
 
-The model takes an input feature vector based on the histogram calculation of an HSV image measuring $(100$pixels$\times100$pixels), Using OpenCV and Python.
-Within OpenCV, hue is a number from 0 to 179, inclusive, and saturation and value are both numbers from 0 to 255, inclusive.
-These calculation values then get flattened down into a 1-dimensional feature vector storing 689 numbers. 
+The model takes an input feature vector based on the histogram calculation of an HSV
+image measuring $(100$pixels$\times100$pixels), Using OpenCV and Python.
+Within OpenCV, hue is a number from 0 to 179, inclusive, and saturation and value are
+both numbers from 0 to 255, inclusive (see \autoref{fig:ripe-apple-example}).
+These calculation values then get flattened down into a 1-dimensional feature vector
+storing 689 numbers.
 This feature vector is used as input for our SVM classifier.
 
 \begin{figure}[!htb]
     \fontsize{7}{5}\selectfont
     \centering
     \includegraphics[scale=0.7]
-    {figures/Ripe Apple Example.jpg}
+    {figures/Ripe Apple Example}
     \includegraphics[scale=.5]
-    {figures/ripeness_features.png}
-    \label{Ripe Apple Example}
+    {figures/ripeness_features}
     \caption{
-        A ripe apple, and its associated HSV histogram calculations from the image processing. A larger y value represents that that Hue, Saturation, or Value was more common in the image.
+        A ripe apple, and its associated HSV histogram calculations from the image
+        processing. A larger y value represents that that Hue, Saturation, or Value
+        was more common in the image.
     }
+    \label{fig:ripe-apple-example}
 \end{figure}
 
 \subsubsection{Improvements}
-Because we were unable to find data focused more specifically on detecting ripeness, 
-one good way to improve the performance of our project would be to gather picture of both ripe and unripe variants of 
-whatever apple species the drone would be targeting. 
-To make this model production ready, it would likely require a new ripeness model to be trained for each species of apple targeted.
-Also, the model is currently trained on images of apples over a white background, for a production environment this would likely be much less effective.
-As with most models increasing the amount of images used for the training and testing would likely also improve it's performance.
+Because we were unable to find data focused more specifically on detecting ripeness,
+one good way to improve the performance of our project would be to gather picture of
+both ripe and unripe variants of
+whatever apple species the drone would be targeting.
+To make this model production ready, it would likely require a new ripeness model to
+be trained for each species of apple targeted.
+Also, the model is currently trained on images of apples over a white background, for
+a production environment this would likely be much less effective.
+As with most models increasing the amount of images used for the training and testing
+would likely also improve its performance.
