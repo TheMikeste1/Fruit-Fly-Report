@@ -17,7 +17,7 @@ A confusion matrix was then generate on a test set, the results of which can be 
     \label{fig:apple-tree-mode-training-curve}
 \end{figure}
 
-\begin{figure}[!htb]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=\columnwidth,keepaspectratio]
     {./figures/confusion_matrix_All_Files_on_Dataset}
@@ -35,7 +35,7 @@ We believe this is because the datasets used to train the models~\cite{Fruit360,
 We attempted to enhance the dataset through curating web-scraped images, but the models ultimately yielded the same results.
 Given more time, we feel better data could be accumulated and better models developed.
 
-\begin{figure}[!htb]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=\columnwidth,keepaspectratio]
     {./figures/confusion_matrix_All_Files_on_Hands_with_Apples}
@@ -52,7 +52,7 @@ The ripeness prediction model had great performance, it was able to achieve a va
 This could be because of our dataset. We used 1272 images of two different apple species that were all taken in a very controlled environment with small amounts of variance between each image.
 A model similar to this one being used in a real world situation would likely perform far worse.
 
-\begin{figure}[!htb]
+\begin{figure}[htb]
     \centering
     \includegraphics[width=\columnwidth,keepaspectratio]
     {./figures/ripeness_confusion.png}
@@ -69,9 +69,9 @@ Even with their shortcomings, the models developed were sufficient for use with 
 \autoref{fig:drone-haar-cascade} shows an image captured from the drone during its movement phase.
 The drone was able to detect and approach apples, as well as detect if they were ripe and if they were rotten.
 
-\begin{figure}[!htb]
+\begin{figure}[htb]
     \centering
-    \includegraphics[scale=0.5,keepaspectratio]
+    \includegraphics[scale=0.4,keepaspectratio]
     {./figures/haar-cascade-detection}
     \caption{
         An image taken through the drone camera during the calculate-relative-position phase of the intelligence hierarchy.
